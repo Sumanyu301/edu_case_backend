@@ -11,13 +11,6 @@ const schoolSchema = z.object({
   longitude: z.number().min(-180).max(180),
 });
 
-// Add School API:
-// Endpoint: /addSchool
-// Method: POST
-// Payload: Includes name, address, latitude, and longitude.
-// Functionality: Validates the input data and adds a new school to the schools table.
-// Validation: Ensure all fields are properly validated before insertion (e.g., non-empty, correct data types).
-
 router.post("/addSchool", async (req, res) => {
   try {
     const { name, address, latitude, longitude } = schoolSchema.parse(req.body);

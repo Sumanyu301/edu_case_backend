@@ -1,10 +1,3 @@
-// List Schools API:
-// Endpoint: /listSchools
-// Method: GET
-// Parameters: User's latitude and longitude.
-// Functionality: Fetches all schools from the database, sorts them based on proximity to the user's location, and returns the sorted list.
-// Sorting Mechanism: Calculate and sort by the geographical distance between the user's coordinates and each school's coordinates.
-
 import express from "express";
 const router = express.Router();
 import { PrismaClient } from "@prisma/client";

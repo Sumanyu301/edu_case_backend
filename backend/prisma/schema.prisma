@@ -13,17 +13,8 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
-// Database Setup:
-// Description: Create a schools table in MySQL with the following fields:
-// id (Primary Key)
-// name (VARCHAR)
-// address (VARCHAR)
-// latitude (FLOAT)
-// longitude (FLOAT)
-
 model School {
-  id        Int      @id @default(autoincrement())
+  id        Int    @id @default(autoincrement())
   name      String
   address   String
   latitude  Float
